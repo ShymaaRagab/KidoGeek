@@ -5,6 +5,7 @@ import { Course } from '../interfaces/course.interface';
   providedIn: 'root'
 })
 export class CartServiceService {
+  total: number=0;
 
   constructor() {
     this.getCartsData;
@@ -36,5 +37,18 @@ export class CartServiceService {
       this.courses_cart = this.courses_cart.filter(course => course.course_id !== courseId);
       localStorage.setItem('myCart', JSON.stringify(this.courses_cart));
     }
+  }
+
+  clearCart(){
+    this.courses_cart = [];
+    localStorage.setItem('myCart', JSON.stringify(this.courses_cart));
+  }
+
+  totalPriceInCart(){
+    this.total=0;
+    this.courses_cart.forEach(c => {
+      this.total += c.price;
+    });
+    return this.total;
   }
 }

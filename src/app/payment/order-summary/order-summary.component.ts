@@ -16,6 +16,7 @@ export class OrderSummaryComponent {
   ngOnInit(): void {
     this.cartItems = this.cartService.getCartsData();
   }
+  
   totalPrice(){
     this.total=0;
     this.cartItems.forEach(c => {

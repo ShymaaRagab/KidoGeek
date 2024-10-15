@@ -16,6 +16,9 @@ import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { PaymentComponent } from './payment/payment.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
+import { PaymentSuccessComponent } from './payment-success/payment-success.component';
+
+
 
 
 const routes: Routes = [
@@ -35,6 +38,8 @@ const routes: Routes = [
   { path: 'course_detail', component: CourseDetailComponent, title: 'course_detail' },
   { path: 'checkOut', component: PaymentComponent, title: 'Check Out' },
   { path: 'profile', component: ProfileComponent, title: 'profile' },
+  { path: 'payment-success', component: PaymentSuccessComponent, title: 'payment-success'},
+
   { path: '**', component: NotFoundComponent, title: 'Error' },
 ];
 
