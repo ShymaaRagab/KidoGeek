@@ -13,7 +13,6 @@ export class PaymentFormComponent {
   constructor(private router: Router, private CartService:CartServiceService){}
   
 
-
   onSubmit() {
     if(this.CartService.getCartsData().length>0){
       this.navigateToPath('payment-success');
