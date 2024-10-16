@@ -1,4 +1,3 @@
-
 h2 {
   display: inline-block;
   padding: 10px 20px;
@@ -6,7 +5,7 @@ h2 {
   border-radius: 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   font-size: 40px;
-  color: #fff; /* Corrected color code */
+  color: #fff;
   font-weight: bold;
   text-align: center;
   position: relative;
@@ -21,11 +20,11 @@ h4 {
   text-align: center;
 }
 div {
-  text-align: center; /* Center align the h2 inside the container */
- 
+  text-align: center;
+
 }
 .spacing {
-  margin-top: 60px; /* Adjust this value for the desired spacing */
+  margin-top: 60px;
 }
 
 
@@ -63,47 +62,44 @@ div {
   color: #FC800A;
 }
 
-/* Set the carousel height and width */
+
 .carousel-inner {
-  max-height: 400px;  /* Adjust the height as needed */
-  overflow: hidden;   /* Prevent overflow */
+  max-height: 400px;
+  overflow: hidden;
 }
 
-/* Customize the caption text */
+
 .carousel-caption h5 {
   font-size: 24px;
   font-weight: bold;
-  color: #f1c40f;  /* Yellowish color for the headings */
-  padding-top: 20px; /* Adjust this value for more/less space */
+  color: #f1c40f;
+  padding-top: 20px;
 }
 
 .carousel-caption p {
   font-size: 20px;
-  color: #fff;   /* White color for the paragraph text */
+  color: #fff;
 }
 
-/* Control the carousel indicator colors */
+
 .carousel-indicators [data-bs-target] {
-  background-color: #f1c40f;  /* Yellowish indicator dots */
+  background-color: #f1c40f;
 }
 
-/* Change the style of the control buttons (Next and Previous) */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: #f1c40f;  /* Yellowish color for the control buttons */
+  background-color: #f1c40f;
   border-radius: 50%;
   padding: 10px;
 }
 
-/* Set the image width and height to maintain aspect ratio */
+
 .carousel-item img {
-  /*object-fit: cover;*/
   width: 80%;
-  height: 400px; 
+  height: 400px;
   display:block;
   margin-right: auto;
   margin-left: auto;
-  
 }
 
 

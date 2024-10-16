@@ -12,12 +12,12 @@
 
 .profile-header {
   display: flex;
-  align-items: center; /* Vertically centers the items */
+  align-items: center;
   padding: 10px;
   border: none;
-  background-color: transparent; /* Optional background color */
-  justify-content: flex-start; /* Aligns content to the left */
-  margin-left: 0; /* Ensures the header starts at the leftmost position */
+  background-color: transparent;
+  justify-content: flex-start;
+  margin-left: 0;
   width: fit-content;
   font-size: 36px;
   color: #ffae62;
@@ -26,7 +26,7 @@
 .user-name {
   font-size: 30px;
   font-weight: bold;
-  margin-right: 20px; /* Add some space between the name and the icon */
+  margin-right: 20px; 
 }
 
 .profile-body {
