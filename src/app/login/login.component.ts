@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { UsersService } from '../../services/users.service';
 import { Router } from '@angular/router';
 import { User } from '../../interfaces/user.interface';
+import { UserAuthService } from '../../services/user-auth.service';
 
 @Component({
   selector: 'app-login',
@@ -9,22 +10,23 @@ import { User } from '../../interfaces/user.interface';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-  user: User = { email: '', password: '' }; 
   errorMessage: string = '';
-  isLoggedIn: boolean = false; 
+  isLoggedIn: boolean = false;
+  userInput: string='';
+  password: string='';
 
-  constructor(private usersService: UsersService, private router: Router) { }
+  constructor(private router: Router, private userAuth: UserAuthService) {}
 
-  onLogin(): void {
-    const isAuthenticated = this.usersService.login(this.user); 
-
-    if (isAuthenticated) {
-      this.isLoggedIn = true; 
-      this.errorMessage = '';
-      this.router.navigate(['/home']); 
-    } else {
-      this.isLoggedIn = false; 
+    onLogin(): void {
+      const isAuthenticated = this.userAuth.login(this.userInput, this.userInput, this.password);
+      if (isAuthenticated) {
+        this.isLoggedIn = true;
+        this.errorMessage = '';
+        this.router.navigate(['/home']);
+      } else {
+        this.isLoggedIn = false;
       this.errorMessage = 'Invalid username or password. Please try again.';
     }
   }
 }
+

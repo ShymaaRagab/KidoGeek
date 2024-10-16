@@ -36,7 +36,6 @@ export class RegisterComponent {
     }
     else {
       this.confirmation_Error = false;
-
       this.userRgisterData = {
         id: this.Id,
         user_name: this.registerForm.get('user_name')?.value,

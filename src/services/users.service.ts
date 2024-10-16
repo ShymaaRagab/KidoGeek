@@ -6,13 +6,13 @@ import { User } from '../interfaces/user.interface';
 })
 export class UsersService {
   constructor() { }
-  private loggedIn: boolean = false; 
+  private loggedIn: boolean = false;
 
   login(user: User): boolean {
     const isAuthenticated = this.users_data.some(
       users_data => users_data.email === user.email && users_data.password === user.password
     );
-    this.loggedIn = isAuthenticated; 
+    this.loggedIn = isAuthenticated;
     return isAuthenticated;
   }
   users_data: User[] = [
@@ -54,8 +54,9 @@ export class UsersService {
       progress: ['60%', '25%'],
       email: 'mohamed123@gmail.com',
       photo: '../assets/usersPhotos/user6.jpg',
-      comments: ["The instructors are fantastic! They explain complex coding concepts in a way that's easy for kids to understand."]
-
+      comments: ["The instructors are fantastic! They explain complex coding concepts in a way that's easy for kids to understand."],
+      lastAccess:'12/2/2023',
+      firstAccess:'12/2/2022'
     },
     {
       id: 4,
@@ -67,7 +68,9 @@ export class UsersService {
       progress: ['75%', '40%', '55%'],
       email: 'sara568@gmail.com',
       photo: '../assets/usersPhotos/user4.jpg',
-      comments: ["The projects are engaging and practical. It's amazing to see what my child can create with the skills they've learned."]
+      comments: ["The projects are engaging and practical. It's amazing to see what my child can create with the skills they've learned."],
+      lastAccess:'12/2/2023',
+      firstAccess:'12/2/2022'
     },
     {
       id: 5,
@@ -79,7 +82,9 @@ export class UsersService {
       progress: ['30%', '65%'],
       email: 'omar445@gmail.com',
       photo: '../assets/usersPhotos/user7.jpg',
-      comments: ["The platform is user-friendly, and the support team is very responsive whenever we have questions."]
+      comments: ["The platform is user-friendly, and the support team is very responsive whenever we have questions."],
+      lastAccess:'12/2/2023',
+      firstAccess:'12/2/2022'
     },
     {
       id: 6,
@@ -91,7 +96,9 @@ export class UsersService {
       progress: ['10%', '85%', '50%'],
       email: 'lili76@gmail.com',
       photo: '../assets/usersPhotos/user9.jpg',
-      comments: ["I appreciate the emphasis on creativity alongside coding. It's inspiring to see my child's ideas come to life."]
+      comments: ["I appreciate the emphasis on creativity alongside coding. It's inspiring to see my child's ideas come to life."],
+      lastAccess:'12/2/2023',
+      firstAccess:'12/2/2022'
     },
     {
       id: 7,
@@ -103,7 +110,9 @@ export class UsersService {
       progress: ['100%', '60%'],
       email: 'hassan88@gmail.com',
       photo: '../assets/usersPhotos/user8.jpg',
-      comments: ["The community aspect is wonderful. My kid enjoys collaborating with others and sharing their projects."]
+      comments: ["The community aspect is wonderful. My kid enjoys collaborating with others and sharing their projects."],
+      lastAccess:'12/2/2023',
+      firstAccess:'12/2/2022'
     },
     {
       id: 8,
@@ -115,7 +124,9 @@ export class UsersService {
       progress: ['95%', '35%'],
       email: 'nona12@gmail.com',
       photo: '../assets/usersPhotos/user3.jpg',
-      comments: ["The curriculum is well-structured. It builds foundational skills while keeping kids motivated to learn more."]
+      comments: ["The curriculum is well-structured. It builds foundational skills while keeping kids motivated to learn more."],
+      lastAccess:'12/2/2023',
+      firstAccess:'12/2/2022'
     },
     {
       id: 9,
@@ -127,7 +138,9 @@ export class UsersService {
       progress: ['20%', '70%'],
       email: 'khaled45@gmail.com',
       photo: '../assets/usersPhotos/user10.jpg',
-      comments: ["The challenges are thoughtfully designed to encourage problem-solving and critical thinking."]
+      comments: ["The challenges are thoughtfully designed to encourage problem-solving and critical thinking."],
+      lastAccess:'12/2/2023',
+      firstAccess:'12/2/2022'
     },
     {
       id: 10,
@@ -139,7 +152,9 @@ export class UsersService {
       progress: ['85%', '55%', '25%'],
       email: 'm88pa@gmail.com',
       photo: '../assets/usersPhotos/user1.jpg',
-      comments: ["As a parent, I feel confident that my child is gaining valuable skills for the future in a safe and supportive environment."]
+      comments: ["As a parent, I feel confident that my child is gaining valuable skills for the future in a safe and supportive environment."],
+      lastAccess:'12/2/2023',
+      firstAccess:'12/2/2022'
     }
   ]
   isLoggedIn(): boolean {

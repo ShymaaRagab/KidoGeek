@@ -3,18 +3,26 @@
         <h2 class="text-center">Login</h2>
         <form (ngSubmit)="onLogin()">
             <div class="mb-3">
-                <label for="email" class="form-label">Username or Email Address</label>
-                <input type="email" class="form-control" id="email" [(ngModel)]="user.email" name="email" required placeholder="Username or Email Address">
+              <label for="userInput" class="form-label">Username or Email Address</label>
+              <input
+                type="text"
+                class="form-control"
+                id="userInput"
+                [(ngModel)]="userInput"
+                name="userInput"
+                required
+                placeholder="Username or Email Address"
+              />
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" [(ngModel)]="user.password" name="password" required placeholder="Password">
+                <input type="password" class="form-control" id="password" [(ngModel)]="password" name="password" required placeholder="Password">
             </div>
             <button type="submit" class="btn login-btn w-100">Login</button>
             <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
-            <div *ngIf="isLoggedIn" class="success-message">Welcome, {{ user.email }}!</div>
+            <div *ngIf="isLoggedIn" class="success-message">Welcome, {{ userInput }}!</div>
         </form>
-    
+
         <div class="text-center mt-3">— or login with —</div>
         <div class="text-center social-login mt-3">
             <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook"></a>

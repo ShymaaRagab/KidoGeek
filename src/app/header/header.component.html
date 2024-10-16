@@ -40,8 +40,14 @@
             {{numberofItem()}}
           </span>
         </button>
-        <button type="button" class="nav-item btn bttn"routerLink="/login" routerLinkActive="active">Login</button>
-        <button type="button" class="nav-item btn bttn" routerLink="/register">Sign Up</button>
+        <div *ngIf="!is_logged()">
+          <button type="button" class="nav-item btn bttn" routerLink="/login">Login</button>
+          <button type="button" class="nav-item btn bttn" routerLink="/register">Sign Up</button>
+        </div>
+        <div *ngIf="is_logged()">
+          <button type="button" class="nav-item btn bttn" routerLink="/login" (click)="logOut()">Log Out</button>
+          <button type="button" class="nav-item btn bttn" routerLink="/profile">Profile</button>
+        </div>
       </div>
     </div>
   </nav>
