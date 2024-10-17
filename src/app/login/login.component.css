@@ -2,27 +2,54 @@
     background-color: #F7EDE4;
     background-image: url("../../assets/ser_img/log2.png");
     background-repeat: no-repeat;
-    background-size:contain; 
-    background-position: center; 
+    background-size: contain;
+    background-position: center;
     height: 100vh;
     display: flex;
-    justify-content: flex-end;  
-    align-items: center; 
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
 }
 
 .login-container {
-    max-width: 400px;
+    max-width: 90vw;
     padding: 20px;
     background-color: #F7EDE4;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
 .login-btn {
     background-color: #003e31;
     color: white;
 }
+
 .social-login img {
     width: 35px;
     height: 35px;
     margin: 0 10px;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .login-container {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container-fluid {
+        justify-content: center;
+        background-size: cover;
+    }
+
+    .login-container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .social-login img {
+        width: 30px;
+        height: 30px;
+    }
 }
