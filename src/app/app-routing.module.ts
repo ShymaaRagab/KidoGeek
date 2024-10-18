@@ -17,6 +17,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { PaymentSuccessComponent } from './payment-success/payment-success.component';
+import { authGuard } from './auth.guard';
 
 
 
@@ -37,8 +38,8 @@ const routes: Routes = [
   { path: 'Cart', component: CartComponent, title: 'cart' },
   { path: 'course_detail', component: CourseDetailComponent, title: 'course_detail' },
   { path: 'checkOut', component: PaymentComponent, title: 'Check Out' },
-  { path: 'profile', component: ProfileComponent, title: 'profile' },
-  { path: 'payment-success', component: PaymentSuccessComponent, title: 'payment-success'},
+  { path: 'profile', canActivate:[authGuard], component: ProfileComponent, title: 'profile' },
+  { path: 'payment-success', canActivate:[authGuard], component: PaymentSuccessComponent, title: 'payment-success'},
 
   { path: '**', component: NotFoundComponent, title: 'Error' },
 ];

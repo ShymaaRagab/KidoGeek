@@ -1,0 +1,12 @@
+.author {
+  color: #fc800a;
+}
+@media only screen and (max-width: 600px) {
+  h5,
+  .totalPrice {
+    font-size: 18px !important;
+  }
+  p {
+    font-size: 13px !important;
+  }
+}

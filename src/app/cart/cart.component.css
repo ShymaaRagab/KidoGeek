@@ -31,3 +31,32 @@ td{
 .next_pages{
   align-self: self-end;
 }
+
+.auther{
+  color: #FC800A;
+  font-size: 14px;
+}
+@media only screen and (max-width: 768px) {
+  .info_course{
+    margin-right: 10px;
+  }
+  .info_course p{
+    font-size: 13px;
+  }
+  .price{
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .info_course{
+    margin-right: 0px;
+  }
+  .price,
+  .info_course p{
+    font-size: 12px;
+    font-weight: 300 !important;
+  }
+  .info_course button{
+    font-size: 14px;
+  }
+}

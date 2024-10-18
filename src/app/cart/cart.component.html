@@ -7,34 +7,36 @@
 
 
     <div *ngIf="cartItems.length > 0">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th scope="col">Course</th>
-            <th scope="col"></th>
-            <th scope="col">Price</th>
-          </tr>
-        </thead>
-        <tbody *ngFor="let item of cartItems; let i = index">
-          <tr>
-            <td><img [src]="item.photo" class="photo" alt=""></td>
-            <td>
-              <div class="info_course">
-                <p class="fw-bolder">{{item.title}}</p>
-                <p>{{item.category}}</p>
-                <button type="button" (click)="removeFromCart(i)">Remove</button>
-              </div>
-            </td>
-            <td class="fs-5 fw-bolder">${{item.price}}</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="table-responsive">
+        <table class="table table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Course</th>
+              <th scope="col"></th>
+              <th scope="col">Price</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let item of cartItems; let i = index">
+            <tr>
+              <td><img [src]="item.photo" class="photo" alt=""></td>
+              <td>
+                <div class="info_course">
+                  <p class="fw-bolder">{{item.title}}</p>
+                  <p class="auther">{{item.author}}</p>
+                  <button type="button" (click)="removeFromCart(i)">Remove</button>
+                </div>
+              </td>
+              <td class="fs-5 fw-bolder price">${{item.price}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <div class="my-4">
       <p class="fs-4">Total: ${{totalPrice()}}</p>
     </div>
     <div class="next_pages mb-5">
-      <button type="button" class=" btn bttn" (click)="navigateToPath('courses')">
+      <button type="button" class="btn bttn" (click)="navigateToPath('courses')">
         <i class="fa-solid fa-arrow-left"></i>
         Back To Courses
       </button>

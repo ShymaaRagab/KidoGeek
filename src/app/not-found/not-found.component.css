@@ -8,3 +8,17 @@ main{
 img{
   width: 500px;
 }
+@media only screen and (max-width: 600px) {
+  img{
+    width: 300px;
+  }
+  main div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  p{
+    font-size: 13px !important;
+  }
+}

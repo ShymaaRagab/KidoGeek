@@ -18,3 +18,20 @@ p{
   font-size: 14px;
   margin: 0;
 }
+
+@media only screen and (max-width: 600px) {
+  img{
+    width: 320px;
+  }
+  label{
+    margin: 5px 0;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+  }
+  div{
+    font-size: 12px !important;
+  }
+  h5{
+    font-size: 18px !important;
+  }
+}

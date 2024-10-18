@@ -7,3 +7,16 @@
 .top_header_style p{
   color: #fff;
 }
+
+.small_screen{
+  display: none !important;
+}
+@media only screen and (max-width: 600px) {
+  .large_screen{
+    display: none !important;
+  }
+  .small_screen{
+    display: block !important;
+    text-align: center;
+  }
+}

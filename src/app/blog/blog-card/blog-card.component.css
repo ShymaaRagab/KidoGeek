@@ -26,3 +26,12 @@
   cursor: pointer;
   color: #FC800A;
 }
+@media only screen and (max-width: 600px) {
+  .blog-card,
+  .blog-card img{
+    width: 350px;
+  }
+  .text{
+    font-size: 14px;
+  }
+}

@@ -12,10 +12,10 @@
       <button type="button" class="fw-bold fs-2 my-2 me-5  button_style" (click)="open_answer(i)">+</button>
     </div>
     <div *ngIf="ques.open">
-      <p class="text-break text-body-secondary mx-5 ">
+      <p class="text-break text-body-secondary mx-2 text">
         {{ques.answer}}
       </p>
-      <img [src]="ques.photo" alt="photo" class="mx-auto d-block">
+      <img [src]="ques.photo" alt="photo" class="mx-auto d-block ques-img">
     </div>
   </div>
 </div>
