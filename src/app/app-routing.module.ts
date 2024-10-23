@@ -36,7 +36,7 @@ const routes: Routes = [
   { path: 'community', component: CommunityComponent, title: 'community' },
   { path: 'search', component: SearchComponent, title: 'search' },
   { path: 'Cart', component: CartComponent, title: 'cart' },
-  { path: 'course_detail', component: CourseDetailComponent, title: 'course_detail' },
+  { path: 'course_detail/:id', component: CourseDetailComponent, title: 'course_detail' },
   { path: 'checkOut', component: PaymentComponent, title: 'Check Out' },
   { path: 'profile', canActivate:[authGuard], component: ProfileComponent, title: 'profile' },
   { path: 'payment-success', canActivate:[authGuard], component: PaymentSuccessComponent, title: 'payment-success'},

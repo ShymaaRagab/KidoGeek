@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CoursesService {
-  constructor() { }
+  constructor() {  this.filteredCourses = this.courses_data;}
 
   courses_data: Course[] = [
 
@@ -274,14 +274,22 @@ export class CoursesService {
       videos: ['', '']
     }]
 
-  filteredCourses: Course[] = [];
-  ngOnInit(): void {
-    this.filteredCourses = this.courses_data;
-  }
+    filteredCourses: Course[] = [];
 
-  filterCoursesByCategory(category: string): void {
-    this.filteredCourses = this.courses_data.filter((course) => course.category === category);
-  }
 
+    filterCoursesByCategory(category: string): void {
+      this.filteredCourses = this.courses_data.filter((course) => course.category === category);
+    }
+  
+   
+    getCourseById(courseId: number): Course | undefined {
+      const course = this.courses_data.find(c => c.course_id === courseId);
+      if (course) {
+        console.log('Course found:', course);
+      } else {
+        console.log('Course not found for ID:', courseId);
+      }
+      return course;
+    }
 
 }

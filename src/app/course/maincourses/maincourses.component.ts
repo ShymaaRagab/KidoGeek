@@ -33,12 +33,14 @@ export class MaincoursesComponent{
   checkCart( index : number ){
     const cart_data = this.Cart.getCartsData();
     this.inCart = this.coursesservices.filteredCourses.map(course =>
-      cart_data.some(cartCourse => cartCourse.course_id === course.course_id) // Assuming each course has a unique id
+      cart_data.some(cartCourse => cartCourse.course_id === course.course_id) 
     );
     return this.inCart[index];
   }
 
-
+  viewCourseDetail(courseId: number) {
+    this.router.navigate(['/course', courseId]); 
+  }
 
 }
 

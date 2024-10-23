@@ -1,7 +1,7 @@
 <div class="banner mb-5">
   <div class="row">
     <div class="col-md-6 col-sm-10">
-      <h4 class="text-light fw-semibold mb-3">Enroll your chield now</h4>
+      <h4 class="text-light fw-semibold mb-3">Enroll your child now</h4>
     </div>
     <div class="col-md-5 col-sm-10">
     </div>
@@ -10,50 +10,60 @@
   <div class="row justify-content-between">
     <div class="col-md-7 col-sm-10">
       <input style="min-width:80%; margin-bottom: 1.6rem;" class="py-2" type="text" placeholder="search about courses"
-        [(ngModel)]="term">
+        [(ngModel)]="term" />
     </div>
-    <div class="col-md-3 col-sm-10"><button class="btn">Enroll now</button></div>
+    <div class="col-md-3 col-sm-10">
+      <button class="btn">Enroll now</button>
+    </div>
   </div>
-
 </div>
 
 <div class="container">
-  <div class="row ">
+  <div class="row">
     <div class="col-lg-4 col-md-6 col-sm-10 justify-content-center"
-      *ngFor="let x of coursesservices.filteredCourses|search:term; let i = index;">
-      <div class="card  catigory-card mb-5 ">
-        <img [src]="x.photo" class="card-img-top mb-4" alt="...">
-        <div class="price fw-semibold">{{x.price}} $</div>
+      *ngFor="let x of coursesservices.filteredCourses | search: term; let i = index">
+
+      <div class="card catigory-card mb-5" (click)="viewCourseDetail(x.course_id)" style="cursor: pointer;">
+       
+        <img [src]="x.photo" class="card-img-top mb-4" alt="..." />
+        <div class="price fw-semibold">{{ x.price }} $</div>
         <div class="card-body py-0">
-          <h6 class="card-title text-capitalize fw-semibold mb-4">{{x.title}}</h6>
-          <p class="card-text" style="height: 50px; font-size: 0.66rem; overflow: hidden;">{{x.description}} <a
-              routerLink="/course_detail" style=" font-size: 0.66rem; text-decoration: none; font-weight: 400;">see more
-              details</a></p>
-          <div class="mb-2 fw-semibold " style="font-size: 0.66rem; ">auther: <span
-              style="color: rgb(110, 110, 110); font-size: 0.66rem;"> {{x.author}}</span></div>
-          <div class="mb-2 fw-semibold " style="font-size: 0.66rem; ">difficulty: <span
-              style="color: rgb(110, 110, 110); font-size: 0.66rem;"> {{x.difficulty}}</span>
+          <h6 class="card-title text-capitalize fw-semibold mb-4">{{ x.title }}</h6>
+          <p class="card-text" style="height: 50px; font-size: 0.66rem; overflow: hidden;">
+            {{ x.description }}
+            <a routerLink="/course_detail/{{ x.course_id }}"
+              style="font-size: 0.66rem; text-decoration: none; font-weight: 400;"> 
+              see more details</a>
+          </p>
+          <div class="mb-2 fw-semibold" style="font-size: 0.66rem;">
+            author: <span style="color: rgb(110, 110, 110); font-size: 0.66rem;">{{ x.author }}</span>
           </div>
-          <div class="houres_color d-flex justify-content-between mb-5 ">
+          <div class="mb-2 fw-semibold" style="font-size: 0.66rem;">
+            difficulty: <span style="color: rgb(110, 110, 110); font-size: 0.66rem;">{{ x.difficulty }}</span>
+          </div>
+          <div class="houres_color d-flex justify-content-between mb-5">
             <div class="fw-semi-bold" style="font-size: 0.7rem;">
-              &#9716; {{x.duration}} houres
+              &#9716; {{ x.duration }} hours
             </div>
             <div class="fw-semibold" style="font-size: 0.7rem;">
-              🕮 {{x.num_of_videos}} videos
+              🕮 {{ x.num_of_videos }} videos
             </div>
-            <button style="width: 1.6rem; height: 1.6rem;  " class="mb-4 bg-transparent border-0" *ngIf="!checkCart(i)"
+            <button style="width: 1.6rem; height: 1.6rem;" class="mb-4 bg-transparent border-0" *ngIf="!checkCart(i)"
               (click)="addToCart(i)">
               <i class="fa-solid fa-cart-plus cart"></i>
             </button>
-            <button style="width: 1.6rem; height: 1.6rem;  " class="mb-4 bg-transparent border-0" *ngIf="checkCart(i)"
+            <button style="width: 1.6rem; height: 1.6rem;" class="mb-4 bg-transparent border-0" *ngIf="checkCart(i)"
               (click)="removeFromCart(i)">
               <i class="fa-solid fa-trash-can-arrow-up removeFromCart"></i>
             </button>
           </div>
           <div>
-            <button class="animation-button" routerLink="/checkOut" *ngIf="!checkCart(i)" (click)="addToCart(i)"> Enroll
-              Now </button>
-            <button class="animation-button" routerLink="/checkOut" *ngIf="checkCart(i)"> Enroll Now </button>
+            <button class="animation-button" routerLink="/checkOut" *ngIf="!checkCart(i)" (click)="addToCart(i)">
+              Enroll Now
+            </button>
+            <button class="animation-button" routerLink="/checkOut" *ngIf="checkCart(i)">
+              Enroll Now
+            </button>
           </div>
         </div>
       </div>

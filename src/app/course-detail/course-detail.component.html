@@ -1,72 +1,12 @@
-<main>
-  <div class="content">
-    <h1>Web development</h1>
-    <p>
-      Build your own website from the ground up and learn the foundations of
-      HTML/CSS
-    </p>
-  </div>
-  <img [src]="imgSrc11" alt="" />
-</main>
-<section class="section1">
-  <div class="link">
-    <a class="nav-link" routerLink="app-home">Home</a>
-    <img [src]="imgSrc14" alt="" />
-    <a class="nav-link" routerLink="app-home">Category</a>
-    <img [src]="imgSrc14" alt="" />
-    <a class="nav-link" routerLink="app-home">Web development</a>
-    <img [src]="imgSrc14" alt="" />
-    <a class="nav-link" routerLink="app-home">HTML</a>
-  </div>
-
-  <img class="img" [src]="imgSrc12" alt="" />
-  <div class="course-detail">
-    <div class="detail">
-      <div class="title">
-        <p>Age :</p>
-        <p>Duration :</p>
-        <p>Commitment :</p>
-        <p>Language :</p>
-      </div>
-      <div class="details">
-        <h2>10+</h2>
-        <h2>2 to 4</h2>
-        <h2>2 Lessons</h2>
-        <h2>English</h2>
-      </div>
-    </div>
-  </div>
-
-  <button class="btn">Enroll</button>
-</section>
-<section class="section2">
-  <div class="over">
-    <div class="overview">Overview</div>
-    <h3>Course Content</h3>
-  </div>
-
-  <p style="font-size: large">
-    CodaKid Web Development delves into the foundations of web development using
-    HTML, CSS, and Javascript. Projects in this track involve the ground up
-    creation of your own custom website and understanding how to use browser
-    tools to create them.
-  </p>
-  <h5 style="padding: 40px 0">
-    Upon successful completion of Web Development, CodaKid students will be
-    ready to graduate to other CodaKid Core or Elective tracks.
-  </h5>
-  <div class="teacher">
-    <div class="text">
-      <h3 style="color: #fc800a; padding-bottom: 20px">
-        Online Support from Friendly Teachers
-      </h3>
-      <h5>
-        Whether students require set up assistance, have a question, or need
-        support, our team is here to help every step of the way!
-      </h5>
-    </div>
-
-    <img class="col-4" [src]="imgSrc13" alt="" />
-  </div>
-</section>
-
+<div *ngIf="course" class="course-details"> 
+  <h2>{{ course.title }}</h2>
+  <img [src]="course.photo" alt="{{ course.title }}">
+  <p>{{ course.description }}</p>
+  <p><strong>Duration:</strong> {{ course.duration }}</p>
+  <p><strong>Difficulty:</strong> {{ course.difficulty }}</p>
+  <p><strong>Author:</strong> {{ course.author }}</p>
+  <p><strong>Category:</strong> {{ course.category }}</p>
+  <p><strong>Number of Videos:</strong> {{ course.num_of_videos }}</p>
+  <p><strong>Price:</strong> {{ course.price }} $</p>
+  <button class="enroll-button" (click)="addToCart()">Enroll Now</button>
+</div>

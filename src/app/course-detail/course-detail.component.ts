@@ -1,13 +1,27 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { CoursesService } from '../../services/courses.service';
+import { Course } from '../../interfaces/course.interface';
+import { CartServiceService } from '../../services/cart-service.service';
 @Component({
   selector: 'app-course-detail',
   templateUrl: './course-detail.component.html',
-  styleUrl: './course-detail.component.css'
+  styleUrls: ['./course-detail.component.css'],
 })
-export class CourseDetailComponent {
-  imgSrc11:string="../../assets/CourseDetailPhotos/web.png";
-  imgSrc12:string="../../assets/CourseDetailPhotos/web2.png";
-  imgSrc13:string="../../assets/CourseDetailPhotos/teachers.png";
-  imgSrc14:string="../../assets/CourseDetailPhotos/Arrow.png";
+export class CourseDetailComponent implements OnInit {
+  course!: Course | undefined; 
+
+  constructor(private route: ActivatedRoute, private coursesService: CoursesService , private cartService: CartServiceService,) {}
+
+  ngOnInit(): void {
+    const courseId = Number(this.route.snapshot.paramMap.get('id'));
+    this.course = this.coursesService.getCourseById(courseId); 
+  }
+  addToCart() {
+    if (this.course) {
+      this.cartService.addToCart(this.course);
+      alert('You have successfully enrolled in the course!');   
+    }}
+    
 }
+
