@@ -20,7 +20,8 @@ export class CoursesService {
       num_of_videos: 15,
       photo: '../../assets/coursesphoto/new.png',
       price: 30,
-      videos: ['', '']
+      videos: ['', ''],
+      Demo: ''
     },
     {
       course_id: 102,
@@ -33,7 +34,8 @@ export class CoursesService {
       num_of_videos: 88,
       photo: '../../assets/coursesphoto/gaming2.png',
       price: 60,
-      videos: ['', '']
+      videos: ['', ''],
+      Demo: ''
     },
     {
       course_id: 103,
@@ -46,7 +48,8 @@ export class CoursesService {
       num_of_videos: 70,
       photo: '../../assets/coursesphoto/gaming5.jpg',
       price: 33,
-      videos: ['', '']
+      videos: ['', ''],
+      Demo:'',
     },
     {
       course_id: 104,
@@ -59,7 +62,8 @@ export class CoursesService {
       num_of_videos: 120,
       photo: '../../assets/coursesphoto/Rectangle 25.png',
       price: 57,
-      videos: ['', '']
+      videos: ['', ''],
+      Demo: '',
     },
     {
       course_id: 105,
@@ -72,7 +76,8 @@ export class CoursesService {
       num_of_videos: 90,
       photo: '../../assets/coursesphoto/Rectangle 50.png',
       price: 43,
-      videos: ['', '']
+      videos: ['', ''],
+      Demo:''
     },
     {
       course_id: 106,
@@ -85,20 +90,22 @@ export class CoursesService {
       num_of_videos: 100,
       photo: '../../assets/coursesphoto/game.jfif',
       price: 85,
-      videos: ['', '']
+      videos: ['', ''],
+      Demo:''
     },
     {
       course_id: 107,
-      title: 'HTML & CSS for Kids: Create Your First Website',
-      description: 'Learn HTML and CSS to build and style a website.',
+      title: 'HTML5: Create Your First Website',
+      description: "Learn HTML5 to build a website in esaiest way let's start with us.",
       difficulty: 'Beginner',
       duration: '5 weeks',
-      author: 'Mariam Ali',
+      author: 'Shaimaa Nader',
       category: 'web',
       num_of_videos: 88,
       photo: '../../assets/coursesphoto/web1.jpg',
       price: 25,
-      videos: ['', '']
+      videos: ['', ''],
+      Demo:'../assets/Demo/HTML-Shaimaa.mp4'
     },
     {
       course_id: 108,
@@ -106,12 +113,13 @@ export class CoursesService {
       description: 'Introduction to JavaScript, teaching how to make interactive websites.',
       difficulty: 'Intermediate',
       duration: '6 weeks',
-      author: 'Omar Khaled',
+      author: 'Reham Mohammed',
       category: 'web',
       num_of_videos: 65,
       photo: '../../assets/coursesphoto/web3.png',
       price: 25,
-      videos: ['', '']
+      videos: ['', ''],
+      Demo:'../assets/Demo/javaScript-reham.mp4'
     },
     {
       course_id: 109,
@@ -124,7 +132,8 @@ export class CoursesService {
       num_of_videos: 50,
       photo: '../../assets/coursesphoto/web2.png ',
       price: 35,
-      videos: ['', '']
+      videos: ['', ''],
+      Demo:''
     },
     {
       course_id: 110,
@@ -137,7 +146,8 @@ export class CoursesService {
       num_of_videos: 70,
       photo: '../../assets/coursesphoto/webfinal.jpeg',
       price: 40,
-      videos: ['', '']
+      videos: ['', ''],
+      Demo:''
     },
 
 
@@ -152,7 +162,8 @@ export class CoursesService {
       num_of_videos: 88,
       photo: '../../assets/coursesphoto/Rectangle 65.jpg',
       price: 20,
-      videos: ['', '']
+      videos: ['', ''],
+      Demo:''
     },
     {
       course_id: 112,
@@ -165,7 +176,8 @@ export class CoursesService {
       num_of_videos: 85,
       photo: '../../assets/coursesphoto/ai2.jpg',
       price: 56,
-      videos: ['', '']
+      videos: ['', ''],
+      Demo:''
     },
     {
       course_id: 113,
@@ -178,7 +190,8 @@ export class CoursesService {
       num_of_videos: 75,
       photo: '../../assets/coursesphoto/any.jfif',
       price: 60,
-      videos: ['', '']
+      videos: ['', ''],
+      Demo:''
     },
     {
       course_id: 114,
@@ -191,7 +204,8 @@ export class CoursesService {
       num_of_videos: 90,
       photo: '../../assets/coursesphoto/newg1.jfif',
       price: 55,
-      videos: ['', '']
+      videos: ['', ''],
+      Demo:''
     },
     {
       course_id: 115,
@@ -204,7 +218,8 @@ export class CoursesService {
       num_of_videos: 80,
       photo: '../../assets/coursesphoto/A young boy using a laptop possibly doing homework or browsing online _ Premium AI-generated image.jfif',
       price: 50,
-      videos: ['', '']
+      videos: ['', ''],
+      Demo:''
     },
     {
       course_id: 116,
@@ -217,10 +232,9 @@ export class CoursesService {
       num_of_videos: 85,
       photo: '../../assets/coursesphoto/Rectangle 50 (2).jpg',
       price: 65,
-      videos: ['', '']
+      videos: ['', ''],
+      Demo:''
     },
-
-    // Mobile Category (6 courses)
     {
       course_id: 117,
       title: 'Build Your Own Mobile App',
@@ -232,7 +246,8 @@ export class CoursesService {
       num_of_videos: 160,
       photo: '../../assets/coursesphoto/Cómo enseñar español a extranjeros_ todo lo que debes saber.jfif',
       price: 110,
-      videos: ['', '']
+      videos: ['', ''],
+      Demo:''
     },
     {
       course_id: 118,
@@ -245,7 +260,8 @@ export class CoursesService {
       num_of_videos: 80,
       photo: '../../assets/coursesphoto/web2.png',
       price: 50,
-      videos: ['', '']
+      videos: ['', ''],
+      Demo:''
     },
     {
       course_id: 119,
@@ -258,7 +274,8 @@ export class CoursesService {
       num_of_videos: 160,
       photo: '../../assets/coursesphoto/Rectangle 25.png',
       price: 110,
-      videos: ['', '']
+      videos: ['', ''],
+      Demo:''
     },
     {
       course_id: 120,
@@ -271,8 +288,38 @@ export class CoursesService {
       num_of_videos: 60,
       photo: "../../assets/coursesphoto/Premium Photo _ School boy on video conference with a teacher on a laptop.jfif",
       price: 20,
-      videos: ['', '']
-    }]
+      videos: ['', ''],
+      Demo:''
+    },{
+      course_id: 121,
+      title: 'React course' ,
+      description: 'Explore React JS courses that cover skills in component-based development, state management, and building dynamic web applications.',
+      difficulty: 'Intermediate',
+      duration: '8 weeks',
+      author: 'Mennatullah ',
+      category: 'Web',
+      num_of_videos: 60,
+      photo: "../assets/CourseDetailPhotos/download.jpeg",
+      price: 25,
+      videos: ['', ''],
+      Demo:'../assets/Demo/React-Menna.mp4'
+    },{
+      course_id: 122,
+      title: 'Top Angular Courses Online' ,
+      description: 'Begin an Angular course, taught by expert professionals on KidoGeek, and learn how to use this Java based framework to build web applications and much more.',
+      difficulty: 'Intermediate',
+      duration: '8 weeks',
+      author: 'Shaimaa Ragab',
+      category: 'Web',
+      num_of_videos: 60,
+      photo: "../assets/CourseDetailPhotos/Angular.jpeg",
+      price: 25,
+      videos: ['', ''],
+      Demo:'../assets/Demo/React-Menna.mp4'
+    }
+
+
+  ]
 
     filteredCourses: Course[] = [];
 
@@ -280,8 +327,8 @@ export class CoursesService {
     filterCoursesByCategory(category: string): void {
       this.filteredCourses = this.courses_data.filter((course) => course.category === category);
     }
-  
-   
+
+
     getCourseById(courseId: number): Course | undefined {
       const course = this.courses_data.find(c => c.course_id === courseId);
       if (course) {

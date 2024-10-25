@@ -10,7 +10,7 @@
           <div class="card-body py-0">
             <h6 class="card-title text-capitalize fw-semibold mb-4">{{x.title}}</h6>
             <p class="card-text" style="height: 50px; font-size: 0.66rem; overflow: hidden;">{{x.description}} <a
-                routerLink="/course_detail" style=" font-size: 0.66rem; text-decoration: none; font-weight: 400;">see more
+              (click)="viewCourseDetail(x.course_id)" style=" font-size: 0.66rem; text-decoration: none; font-weight: 400;">see more
                 details</a></p>
             <div class="mb-2 fw-semibold " style="font-size: 0.66rem; ">auther: <span
                 style="color: rgb(110, 110, 110); font-size: 0.66rem;"> {{x.author}}</span></div>

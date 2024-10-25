@@ -1,47 +1,23 @@
-.header{
-    height: 63vh;
-    width: 100%;
-    margin-bottom: 100px;
-    background-color: #fd810d; 
-    color: white;
-    font-size: larger; 
-    background-image: url("../../assets/coursesphoto/headerbooks.png");
-    background-repeat: no-repeat;
-    background-size: 15%;
-    background-position-y:15%;
-    background-position-x: 90%;
+.header {
+  height: 40vh;
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: #fd810d;
+  color: white;
+  font-size: larger;
+  background-image: url("../../assets/coursesphoto/headerbooks.png");
+  background-repeat: no-repeat;
+  background-size: 15%;
+  background-position-y: 15%;
+  background-position-x: 90%;
 }
-body{
-    background-color: #fdf0e6;   
+body {
+  background-color: #fdf0e6;
 }
-.search{
-    background-color: white;
-    padding: 0.55rem;
-    width:30vw;
-    border-radius: 1.11rem;
-    color: rgb(165, 156, 137);
+img {
+  max-width: 35%;
 }
-input{
-    border: none;
-    font-size: 0.6rem;
-    
-}
-
-.btn{
-    background-color: #FECF03;
-    border-radius:1.11rem;
-    color: #FFFBF8;
-    font-size:0.66rem; 
-}
-
-.btn:hover{
-    border: 1px solid #FECF03;
-    background-color: white;
-    color: #FECF03;
-    box-shadow:#FECF03 0 0 4px 0.5px;
-}
-
-img{
-    
-    max-width:35%;
+a {
+  color: #fdf0e6;
 }

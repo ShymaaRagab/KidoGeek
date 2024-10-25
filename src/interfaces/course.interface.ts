@@ -10,5 +10,5 @@ export interface Course {
   photo: string;
   price: number;
   videos: string[];
-  
+  Demo: string;
 }

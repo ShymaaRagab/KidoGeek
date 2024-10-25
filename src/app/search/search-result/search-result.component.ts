@@ -34,10 +34,12 @@ export class SearchResultComponent implements OnInit, OnChanges {
       this.cours_data_after_search = [];
     } else {
       this.cours_data_after_search = this.courses_data.filter(course =>
-        course.title.toLowerCase().includes(this.searchText.toLowerCase()) ||
-        course.description.toLowerCase().includes(this.searchText.toLowerCase()) ||
-        course.author.toLowerCase().includes(this.searchText.toLowerCase()) ||
-        course.category.toLowerCase().includes(this.searchText.toLowerCase())
+        course.title.trim().toLowerCase().includes(this.searchText.trim().toLowerCase()) ||
+        course.description.trim().toLowerCase().includes(this.searchText.trim().toLowerCase()) ||
+        course.author.trim().toLowerCase().includes(this.searchText.trim().toLowerCase()) ||
+        course.category.trim().toLowerCase().includes(this.searchText.trim().toLowerCase())||
+        course.price <= Number(this.searchText.trim())
+
       );
     }
   }
@@ -63,5 +65,8 @@ export class SearchResultComponent implements OnInit, OnChanges {
 
   navigateToPath(path:string){
     this.router.navigate([path]);
+  }
+  viewCourseDetail(courseId: number) {
+    this.router.navigate(['/course_detail', courseId]);
   }
 }

@@ -81,3 +81,7 @@ a {
   font-size: 22px;
   transition: all ease 0.5s;
 }
+.card-text a{
+  color: blue;
+  cursor: pointer;
+}

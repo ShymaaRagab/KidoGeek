@@ -110,10 +110,11 @@ section {
   align-items: center;
   text-align: center;
   background: linear-gradient(#fc800a, #fcad63);
-  height: 50vh;
+  min-height: 50vh;
   color: white;
   padding: 0 100px;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 .section3 img {
   padding-bottom: 20px;
@@ -202,5 +203,7 @@ section {
   .section3 {
     padding: 0;
     width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 }

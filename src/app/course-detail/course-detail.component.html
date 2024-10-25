@@ -1,4 +1,8 @@
-<div *ngIf="course" class="course-details"> 
+<div *ngIf="course?.Demo" class="Demo container">
+  <h1>Simple Demo For This Course</h1>
+  <video [src]="course?.Demo" controls autoplay muted></video>
+</div>
+<div *ngIf="course" class="course-details">
   <h2>{{ course.title }}</h2>
   <img [src]="course.photo" alt="{{ course.title }}">
   <p>{{ course.description }}</p>
@@ -8,5 +12,7 @@
   <p><strong>Category:</strong> {{ course.category }}</p>
   <p><strong>Number of Videos:</strong> {{ course.num_of_videos }}</p>
   <p><strong>Price:</strong> {{ course.price }} $</p>
-  <button class="enroll-button" (click)="addToCart()">Enroll Now</button>
+  <button class="enroll-button" routerLink="/checkOut" *ngIf="!checkCart()" (click)="addToCart()"> Enroll
+    Now </button>
+  <button class="enroll-button" routerLink="/checkOut" *ngIf="checkCart()"> Enroll Now </button>
 </div>

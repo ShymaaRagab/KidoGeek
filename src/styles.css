@@ -5,6 +5,7 @@
   font-size: 16px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(--bs-dark-text-emphasis);
+  text-align: justify;
 }
 .button_style {
   border: none;
