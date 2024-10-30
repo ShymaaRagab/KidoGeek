@@ -19,7 +19,7 @@
                 <input type="text" formControlName="user_name" placeholder="type your full name">
                 <div *ngIf="registerForm.get('user_name')?.errors && registerForm.get('user_name')?.touched">
                     
-                    <div class="alert bg-danger py-1 text-light m-0"  *ngIf="registerForm.get('user_name')?.getError('minLength')"> minimum length is 6 letters</div>
+                    <div class="alert bg-danger py-1 text-light m-0"  *ngIf="registerForm.get('user_name')?.getError('minlength')"> minimum length is 6 letters</div>
                 
                     <div class="alert bg-danger py-1 text-light m-0" *ngIf="registerForm.get('user_name')?.getError('required')">this input is required </div>
                 </div>
@@ -52,8 +52,8 @@
             
                 <div *ngIf="registerForm.get('password')?.errors&&registerForm.get('password')?.touched">
                     <div class="alert bg-danger py-1 text-light m-0 " *ngIf="registerForm.get('password')?.getError('required')">this input is required </div>
-                    <div class="alert bg-danger py-1  text-light m-0"  *ngIf="registerForm.get('password')?.getError('minLength')"> minimum length is 8</div>
-                    <div class="alert bg-danger py-1  text-light m-0"  *ngIf="registerForm.get('password')?.getError('pattern')"> password must start with capital letter</div>
+                    <div class="alert bg-danger py-1  text-light m-0"  *ngIf="registerForm.get('password')?.getError('minlength')"> minimum length is 8</div>
+                    <div class="alert bg-danger py-1  text-light m-0"  *ngIf="registerForm.get('password')?.getError('pattern')"> password must contain capital,small letters and numbers</div>
                 </div>
               
                 <br>
@@ -63,14 +63,15 @@
             
                 <div *ngIf="registerForm.get('confirm_password')?.errors&&registerForm.get('confirm_password')?.touched ">
                     <div class="alert bg-danger py-1 text-light m-0 " *ngIf="registerForm.get('confirm_password')?.getError('required')">this input is required </div>
-                    <div class="alert bg-danger py-1  text-light m-0"  *ngIf="registerForm.get('confirm_password')?.getError('minLength')"> minimum length is eight</div>
-                    <div class="alert bg-danger py-1  text-light m-0"  *ngIf="registerForm.get('confirm_password')?.getError('pattern')"> password must start with capital </div>
+                    <div class="alert bg-danger py-1  text-light m-0"  *ngIf="registerForm.get('confirm_password')?.getError('minlength')"> minimum length is eight</div>
+                    <div class="alert bg-danger py-1  text-light m-0"  *ngIf="registerForm.get('confirm_password')?.getError('pattern')"> password must contain capital,small letters and numbers </div>
 
                 </div>
                 <br>
               
              <button [disabled]="registerForm.invalid"  type="submit" class="btn">register</button>
              <div class="alert bg-danger py-1  text-light mt-2 " *ngIf="confirmation_Error"> please confirm your password correctly</div>
+             <div class="alert bg-danger py-1  text-light mt-2 " *ngIf="regeterd"> you already have an account please log in</div>
             </form>
     
     
